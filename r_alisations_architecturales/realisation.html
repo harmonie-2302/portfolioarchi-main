@@ -21,53 +21,42 @@
             theme: {
                 extend: {
                     "colors": {
-                        "inverse-primary": "#b6c4ff",
-                        "on-primary-container": "#90a8ff",
-                        "tertiary-container": "#6e2c00",
-                        "tertiary-fixed": "#ffdbcb",
-                        "on-secondary-fixed": "#0b1c30",
-                        "on-primary-fixed": "#00164e",
-                        "on-tertiary": "#ffffff",
-                        "on-tertiary-container": "#A65E2E",
-                        "surface-variant": "#e3e1e9",
-                        "background": "#faf8ff",
-                        "error": "#ba1a1a",
-                        "surface-container-highest": "#e3e1e9",
-                        "surface-container-lowest": "#ffffff",
-                        "surface-dim": "#dad9e1",
-                        "surface-container-low": "#f4f3fa",
-                        "on-tertiary-fixed-variant": "#773205",
-                        "on-surface-variant": "#444651",
-                        "surface-tint": "#4059aa",
-                        "on-secondary-container": "#54647a",
-                        "on-tertiary-fixed": "#341100",
-                        "surface-bright": "#faf8ff",
-                        "outline": "#757682",
-                        "tertiary-fixed-dim": "#ffb691",
-                        "surface": "#faf8ff",
-                        "secondary-fixed-dim": "#b7c8e1",
-                        "on-error": "#ffffff",
-                        "on-secondary-fixed-variant": "#38485d",
-                        "outline-variant": "#c5c5d3",
-                        "error-container": "#ffdad6",
-                        "on-background": "#1a1b21",
-                        "on-error-container": "#93000a",
+                        "primary": "#4A2511",
                         "on-primary": "#ffffff",
-                        "tertiary": "#4b1c00",
-                        "on-surface": "#1a1b21",
-                        "primary-fixed": "#dce1ff",
-                        "on-primary-fixed-variant": "#264191",
-                        "primary-container": "#1e3a8a",
-                        "surface-container": "#eeedf4",
-                        "surface-container-high": "#e9e7ef",
-                        "primary": "#00236f",
+                        "primary-container": "#ebdcd3",
+                        "on-primary-container": "#1a1b21",
+                        "secondary": "#1a1b21",
                         "on-secondary": "#ffffff",
-                        "primary-fixed-dim": "#b6c4ff",
-                        "secondary-fixed": "#d3e4fe",
-                        "secondary": "#505f76",
-                        "inverse-surface": "#2f3036",
-                        "secondary-container": "#d0e1fb",
-                        "inverse-on-surface": "#f1f0f7"
+                        "secondary-container": "#f9f6f4",
+                        "on-secondary-container": "#1a1b21",
+                        "tertiary": "#4A2511",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#e8d5c8",
+                        "on-tertiary-container": "#1a1b21",
+                        "background": "#ffffff",
+                        "on-background": "#1a1b21",
+                        "surface": "#ffffff",
+                        "on-surface": "#1a1b21",
+                        "surface-variant": "#f4ede8",
+                        "on-surface-variant": "#1a1b21",
+                        "surface-container": "#ffffff",
+                        "surface-container-low": "#fcfbfa",
+                        "surface-container-highest": "#ebdcd3",
+                        "surface-container-high": "#f4ede8",
+                        "outline": "#4A2511",
+                        "outline-variant": "#d4bcae",
+                        "inverse-surface": "#1a1b21",
+                        "inverse-on-surface": "#ffffff",
+                        "inverse-primary": "#4A2511",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#e8d5c8",
+                        "on-primary-fixed": "#1a1b21",
+                        "secondary-fixed": "#ebdcd3",
+                        "on-secondary-fixed": "#1a1b21",
+                        "tertiary-fixed": "#e8d5c8",
+                        "surface-dim": "#f4ede8",
+                        "surface-bright": "#ffffff"
                     },
                     "borderRadius": {
                         "DEFAULT": "0.125rem",
@@ -173,27 +162,52 @@
             -webkit-backdrop-filter: blur(12px);
             border: 1px border-outline/10;
         }
+
         .dark .glass-panel {
             background: rgba(26, 27, 33, 0.8);
         }
+
         .thumb-active {
             border-color: #00236f;
             transform: scale(1.05);
         }
+
         .modal-fade-in {
             animation: fadeIn 0.4s ease-out;
         }
+
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
+
         .img-transition {
             transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
         }
+
         @media (max-width: 767px) {
-            h1, h2, h3 { text-wrap: balance; }
-            .px-margin-mobile { padding-left: 24px; padding-right: 24px; }
-            .album-mobile-height { height: calc(100vh - 120px); }
+
+            h1,
+            h2,
+            h3 {
+                text-wrap: balance;
+            }
+
+            .px-margin-mobile {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+
+            .album-mobile-height {
+                height: calc(100vh - 120px);
+            }
         }
     </style>
 </head>
@@ -245,7 +259,7 @@
         <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-end">
                 <div class="md:col-span-8">
-                    <span class="font-label-caps text-label-caps text-primary mb-4 block">PORTFOLIO SÉLECTIONNÉ</span>
+
                     <h1 class="font-display-lg text-display-lg text-primary mb-8">L'équilibre entre la rigueur technique
                         et l'émotion spatiale.</h1>
                     <p class="font-body-lg text-body-lg text-secondary max-w-2xl">Découvrez une sélection de travaux
@@ -263,38 +277,106 @@
         </section>
         <!-- Divider -->
         <div class="w-full h-px border-t border-dashed border-outline/30 mb-section-gap"></div>
-        <!-- First Challenge: Terrasse A2 -->
+        <!-- Mes Projets Section -->
         <section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-section-gap">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
-                <div class="md:col-span-7 relative group overflow-hidden rounded-lg">
-                    <img alt="Premier Projet Terrasse"
-                        class="w-full aspect-[16/9] object-cover transition-transform duration-700 group-hover:scale-105"
-                        data-alt="A detailed architectural photograph of a modern residential rooftop terrace renovation. The design features clean geometric lines, sustainable wood decking, and a minimalist glass railing that overlooks a lush garden. The lighting is warm late-afternoon sun, casting long architectural shadows that highlight the structural integrity and aesthetic precision of the work in a high-end editorial style."
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjVeF6u7SR3tlf5XJ1xvaHYOIuSa30MmEZKDwYNZwa43ILlAwyexuAefj0SsZpLvX_-hWmfdjxvBtENfQHXp9Za_JJdozJrOWOUZZqaq-6VtaSvFCrUTq_cwdzp4tE8J5n0-FqbBxT3cn7rEh4gIPM9W0X_DJnhizh7UWrIcAsPb6gVrqwIRzI8dgKpVtphVFDvBSiKsSrjyuTyQa-TfPBe1idEVIwoDHLgDq_bFsG50I6llkf2NN3PBJc9R-7VA6M0OUiedEX7yVC" />
-                    <div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity">
+            <div class="mb-12">
+                <span class="font-label-caps text-label-caps text-primary mb-2 block">CATÉGORIES DE PROJETS</span>
+                <h2 class="font-headline-lg text-headline-lg text-primary">Mes Projets par Domaine</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+
+                <!-- Bâtiment Multifonctionnel -->
+                <div class="group cursor-pointer" onclick="openProject('multifonctionnel')">
+                    <div
+                        class="aspect-[4/3] overflow-hidden mb-4 relative rounded-lg border border-outline/10 project-card-shadow">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            src="../assets/images/BATIMENT MULTIFONCTIONNEL/bâtiment multi fonctionnel/BHRU_2 - Photo.jpg"
+                            alt="Bâtiment Multifonctionnel" />
+                        <div
+                            class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span
+                                class="bg-white text-primary px-4 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition-all">Voir
+                                la galerie</span>
+                        </div>
                     </div>
+                    <span class="font-label-caps text-label-caps text-on-tertiary-container uppercase">BÂTIMENT
+                        MULTIFONCTIONNEL</span>
+                    <h3 class="font-headline-md text-headline-md text-primary mt-1">Complexes Multifonctionnels</h3>
                 </div>
-                <div class="md:col-span-5 md:pl-12">
+
+                <!-- Commerce -->
+                <div class="group cursor-pointer" onclick="openProject('commerce')">
+                    <div
+                        class="aspect-[4/3] overflow-hidden mb-4 relative rounded-lg border border-outline/10 project-card-shadow">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            src="../assets/images/COMMERCE/1 RENDU.png" alt="Commerce" />
+                        <div
+                            class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span
+                                class="bg-white text-primary px-4 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition-all">Voir
+                                la galerie</span>
+                        </div>
+                    </div>
+                    <span class="font-label-caps text-label-caps text-on-tertiary-container uppercase">COMMERCE</span>
+                    <h3 class="font-headline-md text-headline-md text-primary mt-1">Espaces Commerciaux</h3>
+                </div>
+
+                <!-- Hôtel -->
+                <div class="group cursor-pointer" onclick="openProject('hotel')">
+                    <div
+                        class="aspect-[4/3] overflow-hidden mb-4 relative rounded-lg border border-outline/10 project-card-shadow">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            src="../assets/images/HOTEL/Lumion TD_2 - Photo.jpg" alt="Hôtel" />
+                        <div
+                            class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span
+                                class="bg-white text-primary px-4 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition-all">Voir
+                                la galerie</span>
+                        </div>
+                    </div>
+                    <span class="font-label-caps text-label-caps text-on-tertiary-container uppercase">HÔTEL</span>
+                    <h3 class="font-headline-md text-headline-md text-primary mt-1">Projets Hôteliers</h3>
+                </div>
+
+                <!-- Résidence -->
+                <div class="group cursor-pointer" onclick="openProject('residence')">
+                    <div
+                        class="aspect-[4/3] overflow-hidden mb-4 relative rounded-lg border border-outline/10 project-card-shadow">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            src="../assets/images/RESIDENCE/1/DEFR_1 - Photo.jpg" alt="Résidence" />
+                        <div
+                            class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span
+                                class="bg-white text-primary px-4 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition-all">Voir
+                                la galerie</span>
+                        </div>
+                    </div>
+                    <span class="font-label-caps text-label-caps text-on-tertiary-container uppercase">RÉSIDENCE</span>
+                    <h3 class="font-headline-md text-headline-md text-primary mt-1">Architecture Résidentielle</h3>
+                </div>
+
+                <!-- Universitaire -->
+                <div class="group cursor-pointer" onclick="openProject('universitaire')">
+                    <div
+                        class="aspect-[4/3] overflow-hidden mb-4 relative rounded-lg border border-outline/10 project-card-shadow">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            src="../assets/images/UNIVERSITAIRE/1/RFED_2 - Photo.jpg" alt="Universitaire" />
+                        <div
+                            class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span
+                                class="bg-white text-primary px-4 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition-all">Voir
+                                la galerie</span>
+                        </div>
+                    </div>
                     <span
-                        class="font-label-caps text-label-caps text-on-tertiary-container bg-tertiary-fixed px-3 py-1 mb-6 inline-block">PREMIER
-                        DÉFI (A2)</span>
-                    <h2 class="font-headline-lg text-headline-lg text-primary mb-6">Terrasse Résidentielle sur Bâti
-                        Existant</h2>
-                    <p class="font-body-md text-body-md text-secondary mb-8">Ce projet marque le début de la maturité
-                        technique. Le défi consistait à intégrer une structure légère et moderne sur une maçonnerie
-                        ancienne, nécessitant une analyse précise des descentes de charges et une esthétique
-                        minimaliste.</p>
-                    <div class="border-t border-outline/10 pt-6">
-                        <button onclick="openProject('terrasse')"
-                            class="bg-primary text-on-primary px-8 py-3 rounded font-bold hover:opacity-90 transition-opacity flex items-center gap-2">
-                            Voir les détails
-                            <span class="material-symbols-outlined">visibility</span>
-                        </button>
-                    </div>
+                        class="font-label-caps text-label-caps text-on-tertiary-container uppercase">UNIVERSITAIRE</span>
+                    <h3 class="font-headline-md text-headline-md text-primary mt-1">Infrastructures Académiques</h3>
                 </div>
+
+
+
             </div>
         </section>
-        <!-- The Terrace Project is already here at line 172-190 -->
         <!-- Independent Projects -->
         <section
             class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-section-gap">
@@ -450,39 +532,48 @@
         </div>
     </footer>
     <!-- Project Detail Modal (Modern Album Version) -->
-    <div id="project-modal" class="hidden fixed inset-0 bg-background/95 z-[100] flex items-center justify-center p-0 md:p-6 lg:p-12">
-        <div class="relative w-full h-full max-w-[1600px] bg-surface-container-lowest md:rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
-            
+    <div id="project-modal"
+        class="hidden fixed inset-0 bg-background/95 z-[100] flex items-center justify-center p-0 md:p-6 lg:p-12">
+        <div
+            class="relative w-full h-full max-w-[1600px] bg-surface-container-lowest md:rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
+
             <!-- Close Button (Premium) -->
-            <button id="close-project-modal" class="absolute top-6 right-6 z-[110] bg-white/90 dark:bg-black/50 p-3 rounded-full shadow-lg hover:scale-110 transition-transform">
+            <button id="close-project-modal"
+                class="absolute top-6 right-6 z-[110] bg-white/90 dark:bg-black/50 p-3 rounded-full shadow-lg hover:scale-110 transition-transform">
                 <span class="material-symbols-outlined text-2xl">close</span>
             </button>
 
             <!-- Left/Main Area: Interactive Image Gallery -->
             <div class="relative flex-1 bg-black flex items-center justify-center group h-[60vh] md:h-full">
                 <!-- Navigation Arrows -->
-                <button onclick="prevProjectImage()" class="absolute left-4 z-20 p-2 bg-white/10 hover:bg-white/20 text-white rounded-full backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                <button onclick="prevProjectImage()"
+                    class="absolute left-4 z-20 p-2 bg-white/10 hover:bg-white/20 text-white rounded-full backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
                     <span class="material-symbols-outlined text-4xl">chevron_left</span>
                 </button>
-                <button onclick="nextProjectImage()" class="absolute right-4 z-20 p-2 bg-white/10 hover:bg-white/20 text-white rounded-full backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                <button onclick="nextProjectImage()"
+                    class="absolute right-4 z-20 p-2 bg-white/10 hover:bg-white/20 text-white rounded-full backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
                     <span class="material-symbols-outlined text-4xl">chevron_right</span>
                 </button>
 
                 <!-- Active Image -->
-                <img id="active-modal-img" src="" class="w-full h-full object-contain img-transition" alt="Project Image">
+                <img id="active-modal-img" src="" class="w-full h-full object-contain img-transition"
+                    alt="Project Image">
 
                 <!-- Bottom Thumbnails Strip -->
-                <div id="modal-thumbnails" class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 px-4 py-3 glass-panel rounded-2xl max-w-[90%] overflow-x-auto custom-scrollbar z-20">
+                <div id="modal-thumbnails"
+                    class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 px-4 py-3 glass-panel rounded-2xl max-w-[90%] overflow-x-auto custom-scrollbar z-20">
                     <!-- Thumbnails injected here -->
                 </div>
             </div>
 
             <!-- Right Area: Floating Info Panel -->
-            <div class="w-full md:w-[400px] lg:w-[450px] p-8 md:p-12 overflow-y-auto bg-surface-container-low border-t md:border-t-0 md:border-l border-outline/10 flex flex-col">
+            <div
+                class="w-full md:w-[400px] lg:w-[450px] p-8 md:p-12 overflow-y-auto bg-surface-container-low border-t md:border-t-0 md:border-l border-outline/10 flex flex-col">
                 <div class="flex-1">
-                    <span id="modal-tag" class="font-label-caps text-label-caps text-on-tertiary-container bg-tertiary-fixed px-3 py-1 mb-6 inline-block"></span>
+                    <span id="modal-tag"
+                        class="font-label-caps text-label-caps text-on-tertiary-container bg-tertiary-fixed px-3 py-1 mb-6 inline-block"></span>
                     <h2 id="modal-title" class="font-headline-lg text-primary mb-6 leading-tight"></h2>
-                    
+
                     <div id="modal-description" class="font-body-md text-secondary space-y-4 mb-10 leading-relaxed">
                         <!-- Project description -->
                     </div>
@@ -501,38 +592,856 @@
                 <!-- Footer of modal -->
                 <div class="pt-8 border-t border-outline/10 flex justify-between items-center">
                     <span id="modal-counter" class="font-label-caps text-outline text-xs"></span>
-                    <button onclick="closeAndGoToContact()" class="bg-primary text-on-primary px-6 py-2 rounded-lg font-bold text-sm">Contacter David</button>
+                    <button onclick="closeAndGoToContact()"
+                        class="bg-primary text-on-primary px-6 py-2 rounded-lg font-bold text-sm">Contacter
+                        David</button>
                 </div>
             </div>
         </div>
     </div>
     <script>
         const projectData = {
-            'terrasse': {
-                tag: 'PREMIER DÉFI (A2)',
-                title: 'Terrasse Résidentielle sur Bâti Existant',
-                description: '<p>Ce projet marque le début de la maturité technique. Le défi consistait à intégrer une structure légère et moderne sur une maçonnerie ancienne, nécessitant une analyse précise des descentes de charges et une esthétique minimaliste.</p><p>L\'utilisation de matériaux durables et une attention particulière aux détails de jonction assurent la longévité de l\'ouvrage.</p>',
-                tech: ['ArchiCAD', 'AutoCAD', 'Analyse de Structure'],
+            'commerce': {
+                tag: 'COMMERCE',
+                title: 'Espaces Commerciaux & Boutiques',
+                description: '<p>Conception d\'espaces commerciaux optimisés pour l\'expérience client et la rentabilité spatiale.</p>',
+                tech: ['Lumion', 'ArchiCAD'],
                 images: [
                     {
-                        url: '../assets/terrasse/1a70e1a57f64c99916804df8810fa07f.jpg',
-                        caption: 'Perspective globale : Intégration harmonieuse de la nouvelle structure bois sur l\'existant, créant un dialogue entre tradition et modernité.'
+                        url: "../assets/images/COMMERCE/1 RENDU.png",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (1). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
                     },
                     {
-                        url: '../assets/terrasse/54723caf10a8b696a5442be18c7f8cb0.jpg',
-                        caption: 'Détail structurel : Zoom sur les assemblages de précision garantissant une stabilité optimale et une esthétique épurée.'
+                        url: "../assets/images/COMMERCE/2 RENDU.png",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (2). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
                     },
                     {
-                        url: '../assets/terrasse/af46654cdb2497e05c377f2b5de00bf1.jpg',
-                        caption: 'Espace de vie : Optimisation de la surface pour un confort d\'usage maximal, transformant un toit plat en véritable pièce de vie extérieure.'
+                        url: "../assets/images/COMMERCE/3 RENDU.png",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (3). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
                     },
                     {
-                        url: '../assets/terrasse/b7f83cedfc643d1d442d1bd8375dc088.jpg',
-                        caption: 'Rigueur technique : Mise en œuvre des solutions de renforcement structurel pour supporter le nouveau platelage.'
+                        url: "../assets/images/COMMERCE/CDFR_1 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (CDFR_1). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
                     },
                     {
-                        url: '../assets/terrasse/b86f1f364a89fc2e1cd96683286c4edf.jpg',
-                        caption: 'Finition et Matériaux : Sélection rigoureuse d\'essences de bois durables pour une pérennité accrue face aux intempéries.'
+                        url: "../assets/images/COMMERCE/CDFR_3 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (CDFR_3). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/COMMERCE/CDFR_4 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (CDFR_4). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/COMMERCE/DFRE_1 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (DFRE_1). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/COMMERCE/DFRE_2 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (DFRE_2). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/COMMERCE/DFRE_3 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (DFRE_3). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/COMMERCE/DFRE_5 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (DFRE_5). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/COMMERCE/DFRE_6 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (DFRE_6). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/COMMERCE/DFRE_7 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (DFRE_7). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/COMMERCE/DFRE_8 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (DFRE_8). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/COMMERCE/Lumion 10 Pro 正版授权_1 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (10 Pro 正版授权_1). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/COMMERCE/Lumion 10 Pro 正版授权_10 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (10 Pro 正版授权_10). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/COMMERCE/Lumion 10 Pro 正版授权_2 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (10 Pro 正版授权_2). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/COMMERCE/Lumion 10 Pro 正版授权_3 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (10 Pro 正版授权_3). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/COMMERCE/Lumion 10 Pro 正版授权_4 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (10 Pro 正版授权_4). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/COMMERCE/Lumion 10 Pro 正版授权_5 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (10 Pro 正版授权_5). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/COMMERCE/Lumion 10 Pro 正版授权_9 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (10 Pro 正版授权_9). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/COMMERCE/PAY PAY_11 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (PAY PAY_11). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/COMMERCE/PAY PAY_12 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (PAY PAY_12). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/COMMERCE/PAY PAY_14 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (PAY PAY_14). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/COMMERCE/PAY PAY_17 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (PAY PAY_17). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/COMMERCE/PAY PAY_19 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (PAY PAY_19). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/COMMERCE/PAY PAY_20 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (PAY PAY_20). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    }
+                ]
+            },
+            'hotel': {
+                tag: 'HÔTEL',
+                title: 'Projets Hôteliers & Complexes',
+                description: '<p>Création d\'espaces d\'accueil prestigieux alliant confort, luxe et fonctionnalité.</p>',
+                tech: ['Lumion', 'ArchiCAD', 'Design d\'Intérieur'],
+                images: [
+                    {
+                        url: "../assets/images/HOTEL/43T_1 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (43T_1). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/HOTEL/43T_2 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (43T_2). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/HOTEL/43T_3 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (43T_3). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/HOTEL/43T_5 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (43T_5). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/HOTEL/43T_6 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (43T_6). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/HOTEL/43T_7 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (43T_7). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/HOTEL/43T_8 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (43T_8). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/HOTEL/der_5 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (der_5). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/HOTEL/Lumion 10 Pro 正版授权_1 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (10 Pro 正版授权_1). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/HOTEL/Lumion TD_10 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (TD_10). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/HOTEL/Lumion TD_2 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (TD_2). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/HOTEL/Lumion TD_3 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (TD_3). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/HOTEL/Lumion TD_4 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (TD_4). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/HOTEL/Lumion TD_6 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (TD_6). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/HOTEL/Lumion TD_7 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (TD_7). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/HOTEL/Lumion TD_9 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (TD_9). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    }
+                ]
+            },
+            'residence': {
+                tag: 'RÉSIDENCE',
+                title: 'Architecture Résidentielle',
+                description: '<p>Villas et résidences pensées pour le bien-être, alliant esthétique contemporaine et confort quotidien.</p>',
+                tech: ['ArchiCAD', 'AutoCAD', 'Lumion'],
+                images: [
+                    {
+                        url: "../assets/images/RESIDENCE/1/DEFR_1 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (DEFR_1). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/1/DEFR_2 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (DEFR_2). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/1/DEFR_3 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (DEFR_3). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/1/DEFR_5 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (DEFR_5). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/1/DEFR_6 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (DEFR_6). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/10/dav_Photo - 1.jpg",
+                        caption: "Aperçu détaillé : 10. Vue générée de la conception (dav_Photo - 1). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/10/dav_Photo - 2.jpg",
+                        caption: "Aperçu détaillé : 10. Vue générée de la conception (dav_Photo - 2). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/10/dav_Photo - 3.jpg",
+                        caption: "Aperçu détaillé : 10. Vue générée de la conception (dav_Photo - 3). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/10/dav_Photo - 4.jpg",
+                        caption: "Aperçu détaillé : 10. Vue générée de la conception (dav_Photo - 4). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/10/dav_Photo - 5.jpg",
+                        caption: "Aperçu détaillé : 10. Vue générée de la conception (dav_Photo - 5). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/10/dav_Photo - 6.jpg",
+                        caption: "Aperçu détaillé : 10. Vue générée de la conception (dav_Photo - 6). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/10/dav_Photo - 7.jpg",
+                        caption: "Aperçu détaillé : 10. Vue générée de la conception (dav_Photo - 7). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/10/dav_Photo - 8.jpg",
+                        caption: "Aperçu détaillé : 10. Vue générée de la conception (dav_Photo - 8). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/10/dav_Photo - 9.jpg",
+                        caption: "Aperçu détaillé : 10. Vue générée de la conception (dav_Photo - 9). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/11/CCDR_11 - Photo.jpg",
+                        caption: "Aperçu détaillé : 11. Vue générée de la conception (CCDR_11). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/11/CCDR_12 - Photo.jpg",
+                        caption: "Aperçu détaillé : 11. Vue générée de la conception (CCDR_12). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/11/CCDR_13 - Photo.jpg",
+                        caption: "Aperçu détaillé : 11. Vue générée de la conception (CCDR_13). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/11/CCDR_14 - Photo.jpg",
+                        caption: "Aperçu détaillé : 11. Vue générée de la conception (CCDR_14). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/11/CCDR_15 - Photo.jpg",
+                        caption: "Aperçu détaillé : 11. Vue générée de la conception (CCDR_15). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/11/CCDR_16 - Photo.jpg",
+                        caption: "Aperçu détaillé : 11. Vue générée de la conception (CCDR_16). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/11/CCDR_17 - Photo.jpg",
+                        caption: "Aperçu détaillé : 11. Vue générée de la conception (CCDR_17). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/11/CCDR_18 - Photo.jpg",
+                        caption: "Aperçu détaillé : 11. Vue générée de la conception (CCDR_18). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/11/CCDR_20 - Photo.jpg",
+                        caption: "Aperçu détaillé : 11. Vue générée de la conception (CCDR_20). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/11/EDFR_10 - Photo.jpg",
+                        caption: "Aperçu détaillé : 11. Vue générée de la conception (EDFR_10). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/11/EDFR_2 - Photo.jpg",
+                        caption: "Aperçu détaillé : 11. Vue générée de la conception (EDFR_2). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/11/EDFR_3 - Photo.jpg",
+                        caption: "Aperçu détaillé : 11. Vue générée de la conception (EDFR_3). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/11/EDFR_4 - Photo.jpg",
+                        caption: "Aperçu détaillé : 11. Vue générée de la conception (EDFR_4). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/11/EDFR_5 - Photo.jpg",
+                        caption: "Aperçu détaillé : 11. Vue générée de la conception (EDFR_5). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/11/EDFR_6 - Photo.jpg",
+                        caption: "Aperçu détaillé : 11. Vue générée de la conception (EDFR_6). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/11/EDFR_7 - Photo.jpg",
+                        caption: "Aperçu détaillé : 11. Vue générée de la conception (EDFR_7). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/11/EDFR_8 - Photo.jpg",
+                        caption: "Aperçu détaillé : 11. Vue générée de la conception (EDFR_8). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/11/EDFR_9 - Photo.jpg",
+                        caption: "Aperçu détaillé : 11. Vue générée de la conception (EDFR_9). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/2/RFJK_10 - Photo.jpg",
+                        caption: "Aperçu détaillé : 2. Vue générée de la conception (RFJK_10). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/2/RFJK_2 - Photo.jpg",
+                        caption: "Aperçu détaillé : 2. Vue générée de la conception (RFJK_2). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/2/RFJK_3 - Photo.jpg",
+                        caption: "Aperçu détaillé : 2. Vue générée de la conception (RFJK_3). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/2/RFJK_4 - Photo.jpg",
+                        caption: "Aperçu détaillé : 2. Vue générée de la conception (RFJK_4). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/2/RFJK_5 - Photo.jpg",
+                        caption: "Aperçu détaillé : 2. Vue générée de la conception (RFJK_5). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/2/RFJK_6 - Photo.jpg",
+                        caption: "Aperçu détaillé : 2. Vue générée de la conception (RFJK_6). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/2/RFJK_7 - Photo.jpg",
+                        caption: "Aperçu détaillé : 2. Vue générée de la conception (RFJK_7). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/2/RFJK_9 - Photo.jpg",
+                        caption: "Aperçu détaillé : 2. Vue générée de la conception (RFJK_9). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/3/BIG_1 - Photo.jpg",
+                        caption: "Aperçu détaillé : 3. Vue générée de la conception (BIG_1). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/3/BIG_10 - Photo.jpg",
+                        caption: "Aperçu détaillé : 3. Vue générée de la conception (BIG_10). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/3/BIG_2 - Photo.jpg",
+                        caption: "Aperçu détaillé : 3. Vue générée de la conception (BIG_2). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/3/BIG_3 - Photo.jpg",
+                        caption: "Aperçu détaillé : 3. Vue générée de la conception (BIG_3). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/3/BIG_4 - Photo.jpg",
+                        caption: "Aperçu détaillé : 3. Vue générée de la conception (BIG_4). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/3/BIG_5 - Photo.jpg",
+                        caption: "Aperçu détaillé : 3. Vue générée de la conception (BIG_5). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/3/BIG_6 - Photo.jpg",
+                        caption: "Aperçu détaillé : 3. Vue générée de la conception (BIG_6). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/3/BIG_7 - Photo.jpg",
+                        caption: "Aperçu détaillé : 3. Vue générée de la conception (BIG_7). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/3/BIG_8 - Photo.jpg",
+                        caption: "Aperçu détaillé : 3. Vue générée de la conception (BIG_8). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/3/BIG_9 - Photo.jpg",
+                        caption: "Aperçu détaillé : 3. Vue générée de la conception (BIG_9). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/3/dsze_1 - Photo.jpg",
+                        caption: "Aperçu détaillé : 3. Vue générée de la conception (dsze_1). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/3/dsze_2 - Photo.jpg",
+                        caption: "Aperçu détaillé : 3. Vue générée de la conception (dsze_2). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/3/dsze_3 - Photo.jpg",
+                        caption: "Aperçu détaillé : 3. Vue générée de la conception (dsze_3). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/3/dsze_5 - Photo.jpg",
+                        caption: "Aperçu détaillé : 3. Vue générée de la conception (dsze_5). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/3/dsze_6 - Photo.jpg",
+                        caption: "Aperçu détaillé : 3. Vue générée de la conception (dsze_6). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/4/DEFR_1 - Photo.jpg",
+                        caption: "Aperçu détaillé : 4. Vue générée de la conception (DEFR_1). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/4/DEFR_2 - Photo.jpg",
+                        caption: "Aperçu détaillé : 4. Vue générée de la conception (DEFR_2). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/4/DEFR_3 - Photo.jpg",
+                        caption: "Aperçu détaillé : 4. Vue générée de la conception (DEFR_3). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/4/DEFR_4 - Photo.jpg",
+                        caption: "Aperçu détaillé : 4. Vue générée de la conception (DEFR_4). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/4/DEFR_5 - Photo.jpg",
+                        caption: "Aperçu détaillé : 4. Vue générée de la conception (DEFR_5). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/4/DEFR_6 - Photo.jpg",
+                        caption: "Aperçu détaillé : 4. Vue générée de la conception (DEFR_6). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/4/DEFR_7 - Photo.jpg",
+                        caption: "Aperçu détaillé : 4. Vue générée de la conception (DEFR_7). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/4/DEFR_8 - Photo.jpg",
+                        caption: "Aperçu détaillé : 4. Vue générée de la conception (DEFR_8). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/4/DEFR_9 - Photo.jpg",
+                        caption: "Aperçu détaillé : 4. Vue générée de la conception (DEFR_9). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/4/RTRLumion 10 Pro 正版授权_10 - Photo.jpg",
+                        caption: "Aperçu détaillé : 4. Vue générée de la conception (RTR10 Pro 正版授权_10). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/4/RTRLumion 10 Pro 正版授权_8 - Photo.jpg",
+                        caption: "Aperçu détaillé : 4. Vue générée de la conception (RTR10 Pro 正版授权_8). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/4/RTRLumion 10 Pro 正版授权_9 - Photo.jpg",
+                        caption: "Aperçu détaillé : 4. Vue générée de la conception (RTR10 Pro 正版授权_9). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/4/ZZZZZZZZZZZZZZZZZZZ_10 - Photo.jpg",
+                        caption: "Aperçu détaillé : 4. Vue générée de la conception (ZZZZZZZZZZZZZZZZZZZ_10). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/4/ZZZZZZZZZZZZZZZZZZZ_8 - Photo.jpg",
+                        caption: "Aperçu détaillé : 4. Vue générée de la conception (ZZZZZZZZZZZZZZZZZZZ_8). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/4/ZZZZZZZZZZZZZZZZZZZ_9 - Photo.jpg",
+                        caption: "Aperçu détaillé : 4. Vue générée de la conception (ZZZZZZZZZZZZZZZZZZZ_9). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/5/ZRGEH_1 - Photo.jpg",
+                        caption: "Aperçu détaillé : 5. Vue générée de la conception (ZRGEH_1). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/5/ZRGEH_2 - Photo.jpg",
+                        caption: "Aperçu détaillé : 5. Vue générée de la conception (ZRGEH_2). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/5/ZRGEH_3 - Photo.jpg",
+                        caption: "Aperçu détaillé : 5. Vue générée de la conception (ZRGEH_3). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/5/ZRGEH_4 - Photo.jpg",
+                        caption: "Aperçu détaillé : 5. Vue générée de la conception (ZRGEH_4). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/5/ZRGEH_5 - Photo.jpg",
+                        caption: "Aperçu détaillé : 5. Vue générée de la conception (ZRGEH_5). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/5/ZRGEH_6 - Photo.jpg",
+                        caption: "Aperçu détaillé : 5. Vue générée de la conception (ZRGEH_6). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/5/ZRGEH_7 - Photo.jpg",
+                        caption: "Aperçu détaillé : 5. Vue générée de la conception (ZRGEH_7). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/6/EFR_1 - Photo.jpg",
+                        caption: "Aperçu détaillé : 6. Vue générée de la conception (EFR_1). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/6/EFR_2 - Photo.jpg",
+                        caption: "Aperçu détaillé : 6. Vue générée de la conception (EFR_2). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/6/EFR_3 - Photo.jpg",
+                        caption: "Aperçu détaillé : 6. Vue générée de la conception (EFR_3). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/6/EFR_4 - Photo.jpg",
+                        caption: "Aperçu détaillé : 6. Vue générée de la conception (EFR_4). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/6/EFR_5 - Photo.jpg",
+                        caption: "Aperçu détaillé : 6. Vue générée de la conception (EFR_5). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/6/EFR_6 - Photo.jpg",
+                        caption: "Aperçu détaillé : 6. Vue générée de la conception (EFR_6). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/7/DFRTC_1 - Photo.jpg",
+                        caption: "Aperçu détaillé : 7. Vue générée de la conception (DFRTC_1). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/7/DFRTC_10 - Photo.jpg",
+                        caption: "Aperçu détaillé : 7. Vue générée de la conception (DFRTC_10). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/7/DFRTC_2 - Photo.jpg",
+                        caption: "Aperçu détaillé : 7. Vue générée de la conception (DFRTC_2). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/7/DFRTC_3 - Photo.jpg",
+                        caption: "Aperçu détaillé : 7. Vue générée de la conception (DFRTC_3). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/7/DFRTC_4 - Photo.jpg",
+                        caption: "Aperçu détaillé : 7. Vue générée de la conception (DFRTC_4). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/7/DFRTC_5 - Photo.jpg",
+                        caption: "Aperçu détaillé : 7. Vue générée de la conception (DFRTC_5). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/7/DFRTC_6 - Photo.jpg",
+                        caption: "Aperçu détaillé : 7. Vue générée de la conception (DFRTC_6). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/7/DFRTC_7 - Photo.jpg",
+                        caption: "Aperçu détaillé : 7. Vue générée de la conception (DFRTC_7). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/7/DFRTC_8 - Photo.jpg",
+                        caption: "Aperçu détaillé : 7. Vue générée de la conception (DFRTC_8). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/7/DFRTC_9 - Photo.jpg",
+                        caption: "Aperçu détaillé : 7. Vue générée de la conception (DFRTC_9). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/8/EDRFTG_1 - Photo.jpg",
+                        caption: "Aperçu détaillé : 8. Vue générée de la conception (EDRFTG_1). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/8/EDRFTG_2 - Photo.jpg",
+                        caption: "Aperçu détaillé : 8. Vue générée de la conception (EDRFTG_2). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/8/EDRFTG_3 - Photo.jpg",
+                        caption: "Aperçu détaillé : 8. Vue générée de la conception (EDRFTG_3). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/8/EDRFTG_4 - Photo.jpg",
+                        caption: "Aperçu détaillé : 8. Vue générée de la conception (EDRFTG_4). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/8/EDRFTG_5 - Photo.jpg",
+                        caption: "Aperçu détaillé : 8. Vue générée de la conception (EDRFTG_5). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/8/EDRFTG_6 - Photo.jpg",
+                        caption: "Aperçu détaillé : 8. Vue générée de la conception (EDRFTG_6). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/8/EDRFTG_7 - Photo.jpg",
+                        caption: "Aperçu détaillé : 8. Vue générée de la conception (EDRFTG_7). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/8/EDRFTG_8 - Photo.jpg",
+                        caption: "Aperçu détaillé : 8. Vue générée de la conception (EDRFTG_8). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/8/EDRFTG_9 - Photo.jpg",
+                        caption: "Aperçu détaillé : 8. Vue générée de la conception (EDRFTG_9). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/9/FEFR_1 - Photo.jpg",
+                        caption: "Aperçu détaillé : 9. Vue générée de la conception (FEFR_1). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/9/FEFR_10 - Photo.jpg",
+                        caption: "Aperçu détaillé : 9. Vue générée de la conception (FEFR_10). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/9/FEFR_2 - Photo.jpg",
+                        caption: "Aperçu détaillé : 9. Vue générée de la conception (FEFR_2). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/9/FEFR_4 - Photo.jpg",
+                        caption: "Aperçu détaillé : 9. Vue générée de la conception (FEFR_4). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/9/FEFR_5 - Photo.jpg",
+                        caption: "Aperçu détaillé : 9. Vue générée de la conception (FEFR_5). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/9/FEFR_7 - Photo.jpg",
+                        caption: "Aperçu détaillé : 9. Vue générée de la conception (FEFR_7). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/9/FEFR_8 - Photo.jpg",
+                        caption: "Aperçu détaillé : 9. Vue générée de la conception (FEFR_8). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/9/FEFR_9 - Photo.jpg",
+                        caption: "Aperçu détaillé : 9. Vue générée de la conception (FEFR_9). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/villa kashusha/EXTERIEUR_11 - Photo.jpg",
+                        caption: "Aperçu détaillé : Villa kashusha. Vue générée de la conception (EXTERIEUR_11). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/villa kashusha/EXTERIEUR_12 - Photo.jpg",
+                        caption: "Aperçu détaillé : Villa kashusha. Vue générée de la conception (EXTERIEUR_12). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/villa kashusha/EXTERIEUR_13 - Photo.jpg",
+                        caption: "Aperçu détaillé : Villa kashusha. Vue générée de la conception (EXTERIEUR_13). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/villa kashusha/EXTERIEUR_14 - Photo.jpg",
+                        caption: "Aperçu détaillé : Villa kashusha. Vue générée de la conception (EXTERIEUR_14). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/villa kashusha/EXTERIEUR_16 - Photo.jpg",
+                        caption: "Aperçu détaillé : Villa kashusha. Vue générée de la conception (EXTERIEUR_16). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/villa kashusha/EXTERIEUR_17 - Photo.jpg",
+                        caption: "Aperçu détaillé : Villa kashusha. Vue générée de la conception (EXTERIEUR_17). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/villa kashusha/EXTERIEUR_18 - Photo.jpg",
+                        caption: "Aperçu détaillé : Villa kashusha. Vue générée de la conception (EXTERIEUR_18). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/villa kashusha/EXTERIEUR_19 - Photo.jpg",
+                        caption: "Aperçu détaillé : Villa kashusha. Vue générée de la conception (EXTERIEUR_19). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/villa kashusha/EXTERIEUR_20 - Photo.jpg",
+                        caption: "Aperçu détaillé : Villa kashusha. Vue générée de la conception (EXTERIEUR_20). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/villa kashusha/INTERIEUR_1 - Photo.jpg",
+                        caption: "Aperçu détaillé : Villa kashusha. Vue générée de la conception (INTERIEUR_1). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/villa kashusha/INTERIEUR_10 - Photo.jpg",
+                        caption: "Aperçu détaillé : Villa kashusha. Vue générée de la conception (INTERIEUR_10). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/villa kashusha/INTERIEUR_2 - Photo.jpg",
+                        caption: "Aperçu détaillé : Villa kashusha. Vue générée de la conception (INTERIEUR_2). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/villa kashusha/INTERIEUR_3 - Photo.jpg",
+                        caption: "Aperçu détaillé : Villa kashusha. Vue générée de la conception (INTERIEUR_3). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/villa kashusha/INTERIEUR_4 - Photo.jpg",
+                        caption: "Aperçu détaillé : Villa kashusha. Vue générée de la conception (INTERIEUR_4). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/villa kashusha/INTERIEUR_6 - Photo.jpg",
+                        caption: "Aperçu détaillé : Villa kashusha. Vue générée de la conception (INTERIEUR_6). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/villa kashusha/INTERIEUR_8 - Photo.jpg",
+                        caption: "Aperçu détaillé : Villa kashusha. Vue générée de la conception (INTERIEUR_8). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/villa kashusha/INTERIEUR_9 - Photo.jpg",
+                        caption: "Aperçu détaillé : Villa kashusha. Vue générée de la conception (INTERIEUR_9). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/villa à goma/goma villa_1 - Photo.jpg",
+                        caption: "Aperçu détaillé : Villa à goma. Vue générée de la conception (goma villa_1). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/villa à goma/goma villa_2 - Photo.jpg",
+                        caption: "Aperçu détaillé : Villa à goma. Vue générée de la conception (goma villa_2). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/villa à goma/goma villa_3 - Photo.jpg",
+                        caption: "Aperçu détaillé : Villa à goma. Vue générée de la conception (goma villa_3). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/RESIDENCE/villa à goma/goma villa_4 - Photo.jpg",
+                        caption: "Aperçu détaillé : Villa à goma. Vue générée de la conception (goma villa_4). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    }
+                ]
+            },
+            'universitaire': {
+                tag: 'UNIVERSITAIRE',
+                title: 'Infrastructures Académiques',
+                description: '<p>Des espaces d\'apprentissage stimulants et ergonomiques favorisant l\'excellence académique.</p>',
+                tech: ['Urbanisme', 'ArchiCAD', 'Structure'],
+                images: [
+                    {
+                        url: "../assets/images/UNIVERSITAIRE/1/RFED_2 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (RFED_2). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/UNIVERSITAIRE/1/RFED_3 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (RFED_3). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/UNIVERSITAIRE/1/RFED_4 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (RFED_4). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/UNIVERSITAIRE/1/RFED_5 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (RFED_5). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/UNIVERSITAIRE/1/RFED_6 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet Architectural. Vue générée de la conception (RFED_6). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    }
+                ]
+            },
+            'multifonctionnel': {
+                tag: 'BÂTIMENT MULTIFONCTIONNEL',
+                title: 'Complexes Multifonctionnels',
+                description: '<p>Des structures polyvalentes intégrant différentes fonctions (bureaux, commerces, services) de manière harmonieuse.</p>',
+                tech: ['Analyse Spatiale', 'ArchiCAD', 'Lumion'],
+                images: [
+                    {
+                        url: "../assets/images/BATIMENT MULTIFONCTIONNEL/bâtiment multi fonctionnel/BHRU_2 - Photo.jpg",
+                        caption: "Aperçu détaillé : Bâtiment multi fonctionnel. Vue générée de la conception (BHRU_2). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/BATIMENT MULTIFONCTIONNEL/bâtiment multi fonctionnel/BHRU_3 - Photo.jpg",
+                        caption: "Aperçu détaillé : Bâtiment multi fonctionnel. Vue générée de la conception (BHRU_3). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/BATIMENT MULTIFONCTIONNEL/bâtiment multi fonctionnel/BHRU_6 - Photo.jpg",
+                        caption: "Aperçu détaillé : Bâtiment multi fonctionnel. Vue générée de la conception (BHRU_6). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/BATIMENT MULTIFONCTIONNEL/bâtiment multi fonctionnel/BHRU_7 - Photo.jpg",
+                        caption: "Aperçu détaillé : Bâtiment multi fonctionnel. Vue générée de la conception (BHRU_7). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/BATIMENT MULTIFONCTIONNEL/bâtiment multi fonctionnel/BHRU_8 - Photo.jpg",
+                        caption: "Aperçu détaillé : Bâtiment multi fonctionnel. Vue générée de la conception (BHRU_8). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/BATIMENT MULTIFONCTIONNEL/bâtiment multi fonctionnel/BHRU_9 - Photo.jpg",
+                        caption: "Aperçu détaillé : Bâtiment multi fonctionnel. Vue générée de la conception (BHRU_9). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/BATIMENT MULTIFONCTIONNEL/bâtiment multi fonctionnel/CFDR_1 - Photo.jpg",
+                        caption: "Aperçu détaillé : Bâtiment multi fonctionnel. Vue générée de la conception (CFDR_1). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/BATIMENT MULTIFONCTIONNEL/bâtiment multi fonctionnel/GTYHUJ_1 - Photo.jpg",
+                        caption: "Aperçu détaillé : Bâtiment multi fonctionnel. Vue générée de la conception (GTYHUJ_1). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/BATIMENT MULTIFONCTIONNEL/bâtiment multi fonctionnel/TGQT_1 - Photo.jpg",
+                        caption: "Aperçu détaillé : Bâtiment multi fonctionnel. Vue générée de la conception (TGQT_1). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/BATIMENT MULTIFONCTIONNEL/Projet commerce, église et école pour la comm. de Grace/rcfz_1 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet commerce, église et école pour la comm. de Grace. Vue générée de la conception (rcfz_1). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/BATIMENT MULTIFONCTIONNEL/Projet commerce, église et école pour la comm. de Grace/rcfz_2 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet commerce, église et école pour la comm. de Grace. Vue générée de la conception (rcfz_2). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/BATIMENT MULTIFONCTIONNEL/Projet commerce, église et école pour la comm. de Grace/rcfz_3 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet commerce, église et école pour la comm. de Grace. Vue générée de la conception (rcfz_3). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/BATIMENT MULTIFONCTIONNEL/Projet commerce, église et école pour la comm. de Grace/rcfz_4 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet commerce, église et école pour la comm. de Grace. Vue générée de la conception (rcfz_4). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/BATIMENT MULTIFONCTIONNEL/Projet commerce, église et école pour la comm. de Grace/RJUKH_1 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet commerce, église et école pour la comm. de Grace. Vue générée de la conception (RJUKH_1). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/BATIMENT MULTIFONCTIONNEL/Projet commerce, église et école pour la comm. de Grace/RJUKH_10 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet commerce, église et école pour la comm. de Grace. Vue générée de la conception (RJUKH_10). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/BATIMENT MULTIFONCTIONNEL/Projet commerce, église et école pour la comm. de Grace/RJUKH_2 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet commerce, église et école pour la comm. de Grace. Vue générée de la conception (RJUKH_2). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/BATIMENT MULTIFONCTIONNEL/Projet commerce, église et école pour la comm. de Grace/RJUKH_3 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet commerce, église et école pour la comm. de Grace. Vue générée de la conception (RJUKH_3). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/BATIMENT MULTIFONCTIONNEL/Projet commerce, église et école pour la comm. de Grace/RJUKH_4 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet commerce, église et école pour la comm. de Grace. Vue générée de la conception (RJUKH_4). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/BATIMENT MULTIFONCTIONNEL/Projet commerce, église et école pour la comm. de Grace/RJUKH_5 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet commerce, église et école pour la comm. de Grace. Vue générée de la conception (RJUKH_5). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/BATIMENT MULTIFONCTIONNEL/Projet commerce, église et école pour la comm. de Grace/RJUKH_6 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet commerce, église et école pour la comm. de Grace. Vue générée de la conception (RJUKH_6). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/BATIMENT MULTIFONCTIONNEL/Projet commerce, église et école pour la comm. de Grace/RJUKH_7 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet commerce, église et école pour la comm. de Grace. Vue générée de la conception (RJUKH_7). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/BATIMENT MULTIFONCTIONNEL/Projet commerce, église et école pour la comm. de Grace/RJUKH_8 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet commerce, église et école pour la comm. de Grace. Vue générée de la conception (RJUKH_8). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
+                    },
+                    {
+                        url: "../assets/images/BATIMENT MULTIFONCTIONNEL/Projet commerce, église et école pour la comm. de Grace/RJUKH_9 - Photo.jpg",
+                        caption: "Aperçu détaillé : Projet commerce, église et école pour la comm. de Grace. Vue générée de la conception (RJUKH_9). Ce rendu illustre la vision architecturale, la gestion de la lumière et l'intégration des matériaux."
                     }
                 ]
             }
@@ -545,14 +1454,14 @@
         function openProject(id) {
             const data = projectData[id];
             if (!data) return;
-            
+
             currentProjectImages = data.images;
             currentImgIndex = 0;
 
             document.getElementById('modal-tag').innerText = data.tag;
             document.getElementById('modal-title').innerText = data.title;
             document.getElementById('modal-description').innerHTML = data.description;
-            
+
             const techContainer = document.getElementById('modal-tech');
             techContainer.innerHTML = '';
             data.tech.forEach(t => {
@@ -574,7 +1483,7 @@
             });
 
             updateModalGallery();
-            
+
             modal.classList.remove('hidden');
             modal.classList.add('flex');
             document.body.style.overflow = 'hidden';
@@ -587,7 +1496,7 @@
             const thumbs = document.getElementById('modal-thumbnails').children;
 
             const imageData = currentProjectImages[currentImgIndex];
-            
+
             // Fade effect
             activeImg.style.opacity = '0';
             setTimeout(() => {
@@ -595,7 +1504,7 @@
                 activeCaption.innerText = imageData.caption;
                 counter.innerText = `IMAGE ${currentImgIndex + 1} SUR ${currentProjectImages.length}`;
                 activeImg.style.opacity = '1';
-                
+
                 // Update active thumbnail
                 Array.from(thumbs).forEach((t, i) => {
                     if (i === currentImgIndex) t.classList.add('thumb-active');
