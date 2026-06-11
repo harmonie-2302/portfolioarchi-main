@@ -1,0 +1,364 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+@theme {
+  /* ─── Modern Chocolate & White Palette (Inspired by harmonyharmy.vercel.app) ─── */
+  --color-primary: #5c3d2e; /* Refined Chocolate */
+  --color-primary-rgb: 92, 61, 46;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #ede0d4;
+  --color-on-primary-container: #3d2b1f;
+
+  --color-secondary: #7d5a50; /* Lighter Chocolate / Brown */
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #f9f8f7;
+  --color-on-secondary-container: #2d2422;
+
+  --color-tertiary: #a68a64; /* Golden Brown Accent */
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #fdf5ef;
+  --color-on-tertiary-container: #5c3d2e;
+
+  --color-background: #ffffff;
+  --color-background-rgb: 255, 255, 255;
+  --color-on-background: #2d2422;
+
+  --color-surface: #ffffff;
+  --color-on-surface: #2d2422;
+
+  --color-surface-variant: #f9f8f7;
+  --color-on-surface-variant: #5c3d2e;
+  --color-surface-container: #ffffff;
+  --color-surface-container-low: #f9f8f7;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-high: #f0ebe5;
+  --color-surface-container-highest: #e6ded4;
+
+  --color-outline: #5c3d2e;
+  --color-outline-variant: #d6ccc2;
+
+  --color-inverse-surface: #2d2422;
+  --color-inverse-on-surface: #f9f8f7;
+  --color-inverse-primary: #ede0d4;
+
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+
+  --color-primary-fixed: #5c3d2e;
+  --color-on-primary-fixed: #ffffff;
+  --color-secondary-fixed: #f9f8f7;
+  --color-on-secondary-fixed: #5c3d2e;
+  --color-tertiary-fixed: #a68a64;
+  --color-surface-dim: #e6ded4;
+  --color-surface-bright: #ffffff;
+
+  /* ─── Spacing ─── */
+  --spacing-margin-desktop: 64px;
+  --spacing-base: 8px;
+  --spacing-gutter: 24px;
+  --spacing-container-max: 1280px;
+  --spacing-section-gap: 96px;
+  --spacing-margin-mobile: 20px;
+
+  /* ─── Typography (Roboto Slab Everywhere) ─── */
+  --font-body-lg: "Roboto Slab", serif;
+  --font-body-md: "Roboto Slab", serif;
+  --font-headline-lg-mobile: "Roboto Slab", serif;
+  --font-headline-md: "Roboto Slab", serif;
+  --font-display-lg: "Roboto Slab", serif;
+  --font-headline-lg: "Roboto Slab", serif;
+  --font-label-caps: "Roboto Slab", serif;
+}
+
+/* ─── Base ─── */
+*, *::before, *::after { box-sizing: border-box; font-family: "Roboto Slab", serif; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Roboto Slab', serif;
+  background: #ffffff;
+  color: #2d2422;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f9f8f7; }
+::-webkit-scrollbar-thumb { background: #d6ccc2; border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: #5c3d2e; }
+
+/* ─── Material Icons ─── */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+
+/* ─── Hero gradient overlay ─── */
+.hero-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(var(--color-primary-rgb), 0.05) 0%,
+    rgba(var(--color-background-rgb), 0.5) 50%,
+    var(--color-background) 100%
+  );
+}
+
+/* ─── Dividers ─── */
+.blueprint-divider { border-top: 1px dashed var(--color-outline); opacity: 0.2; }
+.dotted-divider {
+  background-image: radial-gradient(circle, var(--color-primary) 1px, transparent 1px);
+  background-size: 12px 1px;
+  background-repeat: repeat-x;
+  height: 1px;
+  width: 100%;
+  opacity: 0.3;
+}
+
+/* ─── Blueprint dot grid ─── */
+.blueprint-grid {
+  background-image: radial-gradient(circle, var(--color-outline) 1px, transparent 1px);
+  background-size: 32px 32px;
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+/* ─── Section label accent line ─── */
+.section-label::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-primary);
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* ─── Cards ─── */
+.card-hover {
+  transition: transform 0.35s cubic-bezier(.22,.61,.36,1),
+              box-shadow 0.35s cubic-bezier(.22,.61,.36,1);
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(92, 61, 46, 0.08); /* Keep this or use a variable if defined */
+}
+
+/* ─── Buttons ─── */
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  padding: 14px 32px;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 0px; /* Sharp architectural look */
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s cubic-bezier(.2,0,0,1);
+  box-shadow: 0 4px 16px rgba(var(--color-primary-rgb), 0.15);
+}
+.btn-primary:hover {
+  background: var(--color-secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(var(--color-primary-rgb), 0.2);
+}
+
+.btn-outline {
+  border: 1px solid var(--color-outline);
+  color: var(--color-outline);
+  padding: 12px 30px;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 0px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s cubic-bezier(.2,0,0,1);
+}
+.btn-outline:hover {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  transform: translateY(-2px);
+}
+
+/* ─── Image pan on hover ─── */
+.img-pan { transition: transform 0.8s cubic-bezier(.2,0,0,1); }
+.img-pan:hover { transform: scale(1.05); }
+
+/* ─── Timeline ─── */
+.timeline-line {
+  width: 2px;
+  background: linear-gradient(to bottom, var(--color-primary), var(--color-surface-container-high));
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  border: 3px solid var(--color-background);
+  box-shadow: 0 0 0 2px var(--color-primary), 0 4px 12px rgba(var(--color-primary-rgb), 0.2);
+}
+
+/* ─── Skill bars ─── */
+.skill-bar {
+  height: 4px;
+  background: var(--color-surface-container-high);
+  border-radius: 0px;
+  overflow: hidden;
+}
+.skill-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-tertiary));
+  transition: width 1.5s cubic-bezier(.2,0,0,1);
+}
+
+/* ─── Gallery modal ─── */
+.glass-panel {
+  background: rgba(var(--color-background-rgb), 0.12);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.img-transition { transition: opacity 0.4s ease; }
+.thumb-active {
+  border-color: var(--color-on-primary) !important;
+  box-shadow: 0 0 0 2px var(--color-primary);
+}
+.custom-scrollbar::-webkit-scrollbar { height: 4px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 99px; }
+
+/* ─── Underline link ─── */
+.link-underline {
+  position: relative;
+  display: inline-block;
+}
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--color-primary);
+  transition: width 0.3s ease;
+}
+.link-underline:hover::after { width: 100%; }
+
+/* ─── Fade-in animation ─── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp 0.8s cubic-bezier(.2,0,0,1) both; }
+
+/* ─── Pull-quote ─── */
+.pull-quote {
+  border-left: 3px solid var(--color-primary);
+  padding-left: 24px;
+  font-style: italic;
+  color: var(--color-on-surface-variant);
+  font-display: italic;
+}
+
+/* ─── Stat number accent ─── */
+.stat-number {
+  font-family: var(--font-display-lg);
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+/* ─── Tag / badge ─── */
+.tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background: var(--color-surface-container-low);
+  color: var(--color-primary);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-radius: 0px;
+}
+.tag-dark {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+/* ─── Custom Cursor ─── */
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-primary);
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out;
+}
+.cursor-outline {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-primary);
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease-out, width 0.3s, height 0.3s;
+  opacity: 0.3;
+}
+
+/* ─── Global Scroll Reveal ─── */
+section, .reveal-item {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.2s cubic-bezier(.2,0,0,1), 
+              transform 1.2s cubic-bezier(.2,0,0,1);
+}
+
+section.revealed, .reveal-item.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Stagger delays for reveal items (manual or automatic) ─── */
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+
+/* ─── Modern Glass Effects ─── */
+.glass {
+  background: rgba(var(--color-background-rgb), 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(var(--color-primary-rgb), 0.1);
+}
+
+/* ─── Interactive architectural elements ─── */
+.arch-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--color-outline-variant);
+  background: var(--color-surface);
+  transition: all 0.5s cubic-bezier(.2,0,0,1);
+}
+.arch-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 30px 60px rgba(var(--color-primary-rgb), 0.12);
+}
+
+img { display: block; max-width: 100%; }
