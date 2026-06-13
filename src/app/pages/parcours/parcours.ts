@@ -4,10 +4,10 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-parcours',
-  standalone: true,
-  imports: [CommonModule, RouterModule, FormsModule],
-  styles: [`
+    selector: 'app-parcours',
+    standalone: true,
+    imports: [CommonModule, RouterModule, FormsModule],
+    styles: [`
     .blueprint-grid {
       background-image: radial-gradient(circle, var(--outline) 1px, transparent 1px);
       background-size: 30px 30px;
@@ -16,7 +16,7 @@ import { FormsModule } from '@angular/forms';
       background: linear-gradient(135deg, var(--surface-container-low) 0%, var(--background) 100%);
     }
   `],
-  template: `
+    template: `
     <main class="relative bg-background">
       <!-- Structural Background Decoration -->
       <div class="absolute inset-0 blueprint-grid pointer-events-none opacity-5"></div>
@@ -33,10 +33,12 @@ import { FormsModule } from '@angular/forms';
                   </p>
               </div>
               <div class="md:col-span-5 relative">
-                  <div class="aspect-[4/5] overflow-hidden rounded-lg border border-outline/10 shadow-2xl group">
-                      <img (click)="viewImage('https://lh3.googleusercontent.com/aida-public/AB6AXuC5F7e5bR0ve2o-nIk3Hn-e-0evPFuohgohrYLkmPDNfsRkZH2ajPUxzDqV7Tw5D09JKtmUT4eSM2X_fBVETfcsdWRsvCBH5zA7TYjFSpx8Jo94Gu-EDUJMiAuYFFRSZq7AeYZG_skcKjyXhJ7KAg3N6ZGdlOkP0rapuwlELMwmx22vZ7MP9DZggocbmxLT0iqOrf4vuIDCVXzph2BDJ522NBZSnz9BZvniCo3d9RxRls6C69sGwP4sZajFArOVK_M8jFywNc6STenM')" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 cursor-zoom-in" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5F7e5bR0ve2o-nIk3Hn-e-0evPFuohgohrYLkmPDNfsRkZH2ajPUxzDqV7Tw5D09JKtmUT4eSM2X_fBVETfcsdWRsvCBH5zA7TYjFSpx8Jo94Gu-EDUJMiAuYFFRSZq7AeYZG_skcKjyXhJ7KAg3N6ZGdlOkP0rapuwlELMwmx22vZ7MP9DZggocbmxLT0iqOrf4vuIDCVXzph2BDJ522NBZSnz9BZvniCo3d9RxRls6C69sGwP4sZajFArOVK_M8jFywNc6STenM" />
-                  </div>
-                  <div class="absolute -bottom-8 -left-8 bg-surface-container-lowest p-10 border border-outline/10 shadow-xl hidden md:block">
+                   <div class="aspect-[4/5] overflow-hidden rounded-lg border border-outline/10 shadow-2xl group">
+                       <img (click)="viewImage('assets/DAA/david.jpg')"
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 cursor-zoom-in"
+                         src="assets/DAA/david.jpg" />
+                   </div>
+                   <div class="absolute -bottom-8 -left-8 bg-surface-container-lowest p-10 border border-outline/10 shadow-xl hidden md:block">
                       <p class="font-headline-md text-headline-md text-primary italic leading-tight">"La vie, c'est le choix."</p>
                       <p class="font-label-caps text-label-caps text-tertiary mt-3 text-right uppercase tracking-widest text-[9px] font-bold">— ABECHA SENIOR</p>
                   </div>
@@ -65,7 +67,7 @@ import { FormsModule } from '@angular/forms';
                           <div class="aspect-video rounded-none overflow-hidden border border-outline/10 shadow-lg group-hover:shadow-2xl transition-all duration-1000">
                               <img class="w-full h-full object-cover cursor-zoom-in grayscale group-hover:grayscale-0 transition-all duration-1000" 
                                    (click)="viewImage('https://lh3.googleusercontent.com/aida-public/AB6AXuC3oJsUQo1tkIJwX2TDmq7Tyt1nq5GedKMFquQiUVeyiDGxDQMVFzcMFnIEbHf806zmsT86fLOUNbsHtiLS6Ye_1PTR1mh4LA7B75v3X91VthsLyAVu4GpWhdqExIIIghWcePdGvDg_cnLCUnivGIbIRIxgxhWD0HzgF9P-Zvn9DPaUHTIpIapHFAeAWirJoRM8l78zBl9a2k7rJ-xVKnVbf_j4sIqj1CN-MVTrWuyO22D62kOfQxt7w88rJwDsB2Qfk1lGPy9Xa2Dl')" 
-                                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3oJsUQo1tkIJwX2TDmq7Tyt1nq5GedKMFquQiUVeyiDGxDQMVFzcMFnIEbHf806zmsT86fLOUNbsHtiLS6Ye_1PTR1mh4LA7B75v3X91VthsLyAVu4GpWhdqExIIIghWcePdGvDg_cnLCUnivGIbIRIxgxhWD0HzgF9P-Zvn9DPaUHTIpIapHFAeAWirJoRM8l78zBl9a2k7rJ-xVKnVbf_j4sIqj1CN-MVTrWuyO22D62kOfQxt7w88rJwDsB2Qfk1lGPy9Xa2Dl')" />
+                                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3oJsUQo1tkIJwX2TDmq7Tyt1nq5GedKMFquQiUVeyiDGxDQMVFzcMFnIEbHf806zmsT86fLOUNbsHtiLS6Ye_1PTR1mh4LA7B75v3X91VthsLyAVu4GpWhdqExIIIghWcePdGvDg_cnLCUnivGIbIRIxgxhWD0HzgF9P-Zvn9DPaUHTIpIapHFAeAWirJoRM8l78zBl9a2k7rJ-xVKnVbf_j4sIqj1CN-MVTrWuyO22D62kOfQxt7w88rJwDsB2Qfk1lGPy9Xa2Dl" referrerpolicy="no-referrer" />
                           </div>
                       </div>
                   </div>
@@ -74,8 +76,8 @@ import { FormsModule } from '@angular/forms';
                   <div class="relative grid grid-cols-1 md:grid-cols-2 gap-20 mb-40 items-center group reveal-item reveal-delay-1">
                       <div class="order-1 md:pr-16">
                           <div class="aspect-video rounded-none overflow-hidden border border-outline/10 shadow-lg group-hover:shadow-2xl transition-all duration-1000">
-                              <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" 
-                                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXmQuxEPMNiQLzQ-nwyVSWyZuB4N2GQmQm0CEmzQ30FAoG7ybSB9lSuKtV4klf28q6gbC5vHsB3GD075U4e17alg7YGOL-fQU68_ETCQYL4sZcT9g_6Cs5J1m54Ptd6kQIc6hszxMhe2P2pwkaO5QepZr1iXkGULBKHnzx2-KIShMf1lF0ONFB5Kpgxv2ZhMUcgWRR3QkJMvSh_k2bWah6DZgAkllaOKBe5_pl4BUbBfaQN7JmHzG8HYephp3yl_4BGvIRE1WI8Ddr" />
+                              <img (click)="viewImage('https://lh3.googleusercontent.com/aida-public/AB6AXuDXmQuxEPMNiQLzQ-nwyVSWyZuB4N2GQmQm0CEmzQ30FAoG7ybSB9lSuKtV4klf28q6gbC5vHsB3GD075U4e17alg7YGOL-fQU68_ETCQYL4sZcT9g_6Cs5J1m54Ptd6kQIc6hszxMhe2P2pwkaO5QepZr1iXkGULBKHnzx2-KIShMf1lF0ONFB5Kpgxv2ZhMUcgWRR3QkJMvSh_k2bWah6DZgAkllaOKBe5_pl4BUbBfaQN7JmHzG8HYephp3yl_4BGvIRE1WI8Ddr')" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 cursor-zoom-in" 
+                                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXmQuxEPMNiQLzQ-nwyVSWyZuB4N2GQmQm0CEmzQ30FAoG7ybSB9lSuKtV4klf28q6gbC5vHsB3GD075U4e17alg7YGOL-fQU68_ETCQYL4sZcT9g_6Cs5J1m54Ptd6kQIc6hszxMhe2P2pwkaO5QepZr1iXkGULBKHnzx2-KIShMf1lF0ONFB5Kpgxv2ZhMUcgWRR3QkJMvSh_k2bWah6DZgAkllaOKBe5_pl4BUbBfaQN7JmHzG8HYephp3yl_4BGvIRE1WI8Ddr" referrerpolicy="no-referrer" />
                           </div>
                       </div>
                       <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-4 h-4 bg-tertiary rounded-full z-10 border-4 border-background group-hover:scale-150 transition-all duration-500"></div>
@@ -101,8 +103,8 @@ import { FormsModule } from '@angular/forms';
                       <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-4 h-4 bg-primary rounded-full z-10 border-4 border-background group-hover:scale-150 transition-all duration-500"></div>
                       <div class="order-1 md:order-2 md:pl-16">
                           <div class="aspect-video rounded-none overflow-hidden border border-outline/10 shadow-lg group-hover:shadow-2xl transition-all duration-1000">
-                              <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" 
-                                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1TsoNBa2JwdPJMBa2JwdPJMlpWA5wmlKDC2lzy7M1cyXt7vwRLFqXLFMNDslEUnu6uBTnwPhZMyDC6WEc-jcHvREmJP6c1XsHa1JlvVkMtiX1_KvuzW083wAHJcmZMQ6j6qHDTEtxfy8icxX-ZSWLSRrKmC1u96YDG5uq5SO9cFhKRL-9SHldXpaFHgxDIpiHvP_wdHkfQQ8imkz6nSvg-OjGtgU7l8w9DccABbcfT9hj2W-V839SfV7sNm6L1euZS9MzOm_jeXQR3NZriy1GD" />
+                              <img (click)="viewImage('assets/DAA/celebration.png')" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 cursor-zoom-in" 
+                                   src="assets/DAA/celebration.png" />
                           </div>
                       </div>
                   </div>
@@ -111,7 +113,7 @@ import { FormsModule } from '@angular/forms';
                   <div class="relative grid grid-cols-1 md:grid-cols-2 gap-20 mb-12 items-center group">
                       <div class="order-1 md:pr-16">
                           <div class="aspect-video rounded-lg overflow-hidden border border-outline/10 shadow-lg group-hover:shadow-2xl transition-all">
-                              <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjGCGK6HQvTVsjqcpMtu6MtMeQa8HCOo_D2C6RLL8BIFgkfWhT_cTGLbJOPx3Hv-iYBlw-GBTpDKysy-k7T5u1DAxdSxX5X4pyW7TFm0iaxmd2PhYmNcdbWgdPp1SS_USoizamvnWvl7JgzVinRjuXEV22sBOQn54L-IETRPPH6fv-u8Lv_obCQwlh5JAUYWmJzmsF9Qw7Oq31IDCZdZV4MemOVS8sDmlUbRlmnHmTTDTWJ583kHS2SJkQlDWt4SAxF09652Tqf4_a" />
+                              <img (click)="viewImage('https://lh3.googleusercontent.com/aida-public/AB6AXuCjGCGK6HQvTVsjqcpMtu6MtMeQa8HCOo_D2C6RLL8BIFgkfWhT_cTGLbJOPx3Hv-iYBlw-GBTpDKysy-k7T5u1DAxdSxX5X4pyW7TFm0iaxmd2PhYmNcdbWgdPp1SS_USoizamvnWvl7JgzVinRjuXEV22sBOQn54L-IETRPPH6fv-u8Lv_obCQwlh5JAUYWmJzmsF9Qw7Oq31IDCZdZV4MemOVS8sDmlUbRlmnHmTTDTWJ583kHS2SJkQlDWt4SAxF09652Tqf4_a')" class="w-full h-full object-cover cursor-zoom-in" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjGCGK6HQvTVsjqcpMtu6MtMeQa8HCOo_D2C6RLL8BIFgkfWhT_cTGLbJOPx3Hv-iYBlw-GBTpDKysy-k7T5u1DAxdSxX5X4pyW7TFm0iaxmd2PhYmNcdbWgdPp1SS_USoizamvnWvl7JgzVinRjuXEV22sBOQn54L-IETRPPH6fv-u8Lv_obCQwlh5JAUYWmJzmsF9Qw7Oq31IDCZdZV4MemOVS8sDmlUbRlmnHmTTDTWJ583kHS2SJkQlDWt4SAxF09652Tqf4_a" referrerpolicy="no-referrer" />
                           </div>
                       </div>
                       <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-4 h-4 bg-tertiary rounded-full z-10 border-4 border-background group-hover:scale-150 transition-transform"></div>
@@ -181,9 +183,9 @@ import { FormsModule } from '@angular/forms';
   `
 })
 export class Parcours {
-  viewImage(url: string) {
-    if ((window as any).openLightbox) {
-        (window as any).openLightbox(url);
+    viewImage(url: string) {
+        if ((window as any).openLightbox) {
+            (window as any).openLightbox(url);
+        }
     }
-  }
 }
